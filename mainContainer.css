@@ -49,6 +49,7 @@ h1 {
 }
 
 .sentence {
+    user-select: none;
     width: 75%;
 }
 
