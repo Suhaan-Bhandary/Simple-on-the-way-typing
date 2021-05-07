@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- All the external links -->
+  <link href="css/all.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"
+    integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg=="
+    crossorigin="anonymous"></script>
+
+  <title>Typing Fight</title>
+
+  <!-- All the internal links -->
+  <link rel="stylesheet" href="popUpContainer.css" />
+  <link rel="stylesheet" href="mainContainer.css" />
+  <link rel="stylesheet" href="graphContainer.css" />
+  <link rel="stylesheet" href="buttonStyle.css" />
+
+</head>
+
+<body>
+  <div class="popUpContainer">
+    <div class="popUp">
+      <h3>A Quick and Simple Typing Session [Works on any device]</h3>
+      <p>You can play a session a numer of times and see it in visual format through graph.</p>
+      <button class="custom-btn btn-11" onclick="document.querySelector('.popUpContainer').style.display = 'none';">
+        Start Typing
+      </button>
+    </div>
+  </div>
+
+  <div class="mainContainer">
+    <div class="sentence"></div>
+
+    <div class="myTyping">
+      <textarea id="myTyping" rows="1" placeholder="Start Typing..."></textarea>
+    </div>
+
+    <div class="counterContainer">
+      <div class="wrongCounter"></div>
+      <div class="buttonContainer">
+        <a onclick="onRestartCondition('restart');" id="restart"><i class="fas fa-sync-alt"></i></a>
+        <a onclick="onRestartCondition('userInput');" id="userInput"><i class="fas fa-download"></i></a>
+      </div>
+    </div>
+
+    <button class="custom-btn btn-11" id="again" onclick="onRestartCondition('playAgain');">
+      Again
+    </button>
+
+    <div class="endDisplay"></div>
+  </div>
+
+  <div class="graphContainer">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
